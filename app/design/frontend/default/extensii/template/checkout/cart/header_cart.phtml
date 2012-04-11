@@ -1,0 +1,6 @@
+<?php $_cartQty = $this->getSummaryCount() ? $this->getSummaryCount() : 0 ?>
+
+<p>
+	<a href="<?php echo $this->getBaseurl()?>checkout/cart">Cosul meu</a>:
+	<span><?php echo $_cartQty ?></span> buc / <?php echo Mage::helper('checkout')->formatPrice($this->getSubtotal()) ?>
+</p>

@@ -1,0 +1,70 @@
+<?php
+	$_productCollection=$this->getLoadedProductCollection();
+    $_helper = $this->helper('catalog/output');
+    $_i = 0;
+?>
+
+
+<div class="sliderContainer">
+	<div id="slider_items" style="position:relative;overflow:hidden;width:737px;height:358px">
+		<?php foreach ($_productCollection as $index=>$_product): $_i++; ?>
+			<div id="slide-<?php echo $_i ?>" class="slider">
+				<img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(737,358); ?>" />
+				<p>Tip Produs: <span>Extensii cu Clip</span><br />
+				Cod Produs: <span><?php echo $_product->getSku() ?></span><br />
+				<span><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></span>.<br />
+		        <a href="<?php echo $_product->getProductUrl() ?>"><img src="<?php echo $this->getSkinUrl() ?>images/slider_bttn.png" alt="detalii" /></a>
+		        </p>
+		    </div>
+	    <?php endforeach; ?>
+	</div>
+	<div class="sliderNavigator">
+    	<div class="sliderArrows"><a href="#"><img src="<?php echo $this->getSkinUrl() ?>images/slider_arrow_l.jpg" alt="left" /></a><a href="#"><img src="<?php echo $this->getSkinUrl() ?>images/slider_arrow_r.jpg" alt="next" /></a></div>
+        <div class="sliderCircles">
+        	<?php for($i=1;$i<=$_productCollection->count();$i++) : ?>
+        		<a href="#"><img id="slide-circle-<?php echo $i ?>" src="<?php echo $this->getSkinUrl() ?>images/slider_circle_active.jpg" alt="active" /></a>
+        	<?php endfor; ?>
+        	<!--
+	        	<a href="#"><img src="<?php echo $this->getSkinUrl() ?>images/slider_circle_blank.jpg" alt="blank" /></a>
+	        	<a href="#"><img src="<?php echo $this->getSkinUrl() ?>images/slider_circle_blank.jpg" alt="blank" /></a>
+	        	<a href="#"><img src="<?php echo $this->getSkinUrl() ?>images/slider_circle_blank.jpg" alt="blank" /></a>
+        	-->
+        </div>
+        <input type="hidden" id="slider_count" value="<?php echo $_productCollection->count() ?>" />
+        <div id="slider_nav" class="sliderNumbers"></div>
+    </div>
+</div>
+
+
+<script language="JavaScript" type="text/javascript">
+  $j(document).ready(function(){
+  		$j('#slider_items').cycle({
+  			fx:  'slideIn,shuffle,scrollDownBounce',
+  			randomizeEffects: false,
+		    delay: -3000,
+		    pager:  '#slider_nav',
+    		after:   showFlicker
+		});
+  });
+
+  function showFlicker(currSlideElement, nextSlideElement, options, forwardFlag) {
+	var current_id = nextSlideElement.id;
+  	parts = current_id.split('-');
+  	var curr_index = parts[1];
+  	var slide_total_nr = $j('#slider_count').val();
+
+  	for(var i=1;i<=slide_total_nr;i++) {
+  		if(i == curr_index) {
+  			$j('#slide-circle-'+i).attr('src','<?php echo $this->getSkinUrl() ?>images/slider_circle_blank.jpg');
+  		} else {
+  			$j('#slide-circle-'+i).attr('src','<?php echo $this->getSkinUrl() ?>images/slider_circle_active.jpg');
+  		}
+  	}
+  	$j('#slider_items')
+		.animate({opacity:1}, {duration:200})
+		.animate({opacity:0}, {duration:100})
+		.animate({opacity:1}, {duration:10})
+		.animate({opacity:0}, {duration:10})
+		.animate({opacity:1}, {duration:10});
+  }
+</script>

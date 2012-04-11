@@ -1,0 +1,71 @@
+
+<?php $_helper = $this->helper('catalog/output'); ?>
+<?php $_product = $this->getProduct(); ?>
+
+<div class="contentDetailPage">
+           	  <div class="contentHeadline">Produs: <?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></div>
+                <div>
+               	  <div class="productDetailImgH">
+               	  		<!--
+                    	<div class="productDetailImgDiv"><img src="<?php echo $this->getSkinUrl() ?>images/proddet_img.png" width="360" height="416" alt="img" /></div>
+                        <div class="productDetailThumb"><a href="#"><img src="<?php echo $this->getSkinUrl() ?>images/thumb1.jpg" width="76" height="55" alt="thub" /></a><a href="#"><img src="<?php echo $this->getSkinUrl() ?>images/thumb2.jpg" width="76" height="55" alt="thub" /></a></div>
+                        -->
+                        <?php echo $this->getChildHtml('media') ?>
+                    </div>
+                    <div class="productDetail">
+                    	<h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+                    	<?php echo $_helper->productAttribute($_product, $_product->getDescription(), 'description') ?>
+                    <!--
+                    <form id="form2" name="form2" method="post" action="">
+            	    <strong>Lungime:</strong>
+<select name="den_asc" id="den_asc">
+                  <option value="">Lungime</option>
+       	          </select>
+                    <br /><br />
+                    <strong>Cantitate:</strong>
+                    <select name="den_asc" id="den_asc">
+                  <option value="">Cantitate</option>
+       	          </select>
+          	    </form>
+          	    -->
+                <div class="detailPriceBttn">
+                  <h3><?php echo number_format($_product->getFinalPrice(),2,',','.') ?> RON <span>cu TVA</span></h3>
+                  +cadou
+                </div>
+                <div class="detailBttn"><a href="<?php echo $this->getAddToCartUrl($_product) ?>">Cumpar</a></div>
+                  </div>
+                    <div class="productDetailContact">
+                    	<h3>Comenzi telefonice:</h3>
+                        <h4>0740-123.456, 0736-123.456</h4>
+                    </div>
+                    <div class="productDetailGratuit"><p><a href="#"><img src="<?php echo $this->getSkinUrl() ?>images/prod_gratis.jpg" width="80" height="53" alt="gratis!" /></a></p>
+                      <p>Gratuit - Gene False!</p>
+                      <p><a href="#"><img src="<?php echo $this->getSkinUrl() ?>images/prod_gratis_bttn.jpg" width="167" height="13" alt="Adauga" /></a></p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="contentHeadline">Extensii din aceeas categorie</div>
+            <div class="productDetailProductsList">
+            <div class="continutProduse">
+                <div class="listareProdus">
+                    	<h1><a href="#">Extensii de par clip-on 50 cm blond #24</a></h1>
+                        <div class="listareProdusImgHolder"><a href="#"><img src="<?php echo $this->getSkinUrl() ?>images/produslist_img2.jpg" alt="produs" /></a></div>
+                        <div><p>180 RON</p><a href="#" class="cumpar">Cumpar</a></div>
+                        <div class="clear"></div>
+              </div>
+                    <div class="listareProdus">
+                    	<h1><a href="#">Extensii de par clip-on 50 cm blond #24</a></h1>
+                        <div class="listareProdusImgHolder"><a href="#"><img src="<?php echo $this->getSkinUrl() ?>images/produslist_img3.jpg" alt="produs" /></a></div>
+                        <div><p>180 RON</p><a href="#" class="cumpar">Cumpar</a></div>
+                        <div class="clear"></div>
+                    </div>
+                  <div class="listareProdus">
+                    	<h1><a href="#">Extensii de par clip-on 50 cm blond #24</a></h1>
+                        <div class="listareProdusImgHolder"><a href="#"><img src="<?php echo $this->getSkinUrl() ?>images/produslist_img1.jpg" alt="produs" /></a></div>
+                        <div><p>180 RON</p><a href="#" class="cumpar">Cumpar</a></div>
+                        <div class="clear"></div>
+                  </div>
+                    <div class="clear"></div>
+            </div>
+            </div>

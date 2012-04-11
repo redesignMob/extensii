@@ -1,0 +1,26 @@
+<?php
+$_helper = $this->helper('catalog/output');
+
+$visibility = array(
+	Mage_Catalog_Model_Product_Visibility::VISIBILITY_BOTH,
+	Mage_Catalog_Model_Product_Visibility::VISIBILITY_IN_CATALOG
+);
+
+$_productCollection = Mage::getResourceModel('reports/product_collection')
+	->addAttributeToSelect('*')
+	->addOrderedQty()
+	->addAttributeToFilter('visibility', $visibility)
+	->setOrder('ordered_qty', 'desc');
+?>
+
+<div class="celMaiVandut">
+<h1>Cele mai vandute produse</h1>
+
+<?php foreach($_productCollection as $_product) : ?>
+	<div class="celMaiVandutBox">
+		<a title="<?php echo $this->stripTags($_product->getName(), null, true) ?>" href="<?php echo $_product->getProductUrl() ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a>
+		<img src="<?php echo $this->helper('catalog/image')->init($_product, 'thumbnail')->resize(192,165); ?>" alt="img" width="192" height="165" />
+	</div>
+<?php endforeach; ?>
+</div>
+<div class="clear">
