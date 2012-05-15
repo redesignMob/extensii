@@ -38,13 +38,17 @@
 
 <script language="JavaScript" type="text/javascript">
   $j(document).ready(function(){
-  		$j('#slider_items').cycle({
-  			fx:  'slideIn,shuffle,scrollDownBounce',
+  	/*	$j('#slider_items').cycle({
+  			fx:  'fade ,shuffle,scrollDownBounce',
   			randomizeEffects: false,
 		    delay: -3000,
-		    pager:  '#slider_nav',
-    		after:   showFlicker
-		});
+		    pager:  '#slider_nav'
+    		,after:   showFlicker
+		});*/
+		$j('#slider_items').cycle({
+		fx:'fade',
+		speed:  2500,
+		pager:  '#slider_nav'});
   });
 
   function showFlicker(currSlideElement, nextSlideElement, options, forwardFlag) {

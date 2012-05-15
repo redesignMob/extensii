@@ -42,6 +42,8 @@ a:hover{
 	background:url(images/login_box.png);
 	width:322px;
 	height:50px;
+	border-radius: 0px 0px 12px 12px;
+	box-shadow: 0px 7px 28px #000;
 }
 .topContact{
 	line-height:22px;
@@ -90,8 +92,9 @@ a:hover{
 /* Content Home */
 
 .content{
-	background-color:#FFFFFF;
+	background-color:#F7EBF8;
 	border:1px solid #FFFFFF;
+	box-shadow: 0px 0px 39px #000;
 }
 .navigation{
 	height:45px;
@@ -843,4 +846,9 @@ a:hover{
 	font-size:11px;
 	color:#525252;	
 	line-height:24px;
+}
+
+.page-title {
+	height:100px;
+	line-height:75px;
 }
