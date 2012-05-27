@@ -1,8 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,img,a {  
-    margin:0; 
-    padding:0; 
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,img,a {
+    margin:0;
+    padding:0;
 }
 body{
 	background:url(images/mainbgr.jpg) center 0 no-repeat #CE4CA5;
@@ -330,7 +330,7 @@ a:hover{
 	float:left;
 }
 .menu{
-	
+
 }
 .menu H1{
 	display:block;
@@ -409,7 +409,7 @@ a:hover{
 .mainMenu ul ul li a{
 	font-size:12px;
 	line-height:12px;
-	
+
 }
 .menuFooter{
 	width:212px;
@@ -417,7 +417,7 @@ a:hover{
 	background:url(images/menu_footer.jpg) no-repeat;
 }
 .cosulMeu{
-	margin-top:10px;	
+	margin-top:10px;
 }
 .cosulMeu H1{
 	width:175px;
@@ -438,12 +438,12 @@ a:hover{
 .cosulMeuPret{
 	padding:13px 0 0 70px;
 	font-size:11px;
-	font-weight:bold;	
+	font-weight:bold;
 	height:71px;
 	line-height:20px;
 }
 .cosulMeuPret span{
-	color:#8a001a;	
+	color:#8a001a;
 }
 .cosulMeuProdus{
 	margin:0 10px 0px 8px;
@@ -476,7 +476,7 @@ a:hover{
 	font-weight:bold;
 	padding-left:37px;
 	background:url(images/leftboxheadline.jpg) no-repeat;
-	text-shadow: 0px 1px 1px #fff;	
+	text-shadow: 0px 1px 1px #fff;
 }
 .comparaProduseBgr{
 	background:url(images/compara_bgr.jpg) top no-repeat;
@@ -511,7 +511,7 @@ a:hover{
 	font-weight:bold;
 	padding-left:29px;
 	background:url(images/leftboxheadline.jpg) no-repeat;
-	text-shadow: 0px 1px 1px #fff;	
+	text-shadow: 0px 1px 1px #fff;
 }
 .NewsletterBgr{
 	background:url(images/newsletterbgr.jpg) top no-repeat;
@@ -529,11 +529,11 @@ a:hover{
 	margin:9px 0 0 6px;
 }
 .contactBox{
-	margin-top:10px;	
+	margin-top:10px;
 }
 .contactBox map{
 	margin:0;
-	padding:0;	
+	padding:0;
 }
 .contactBox H1{
 	width:175px;
@@ -595,7 +595,7 @@ a:hover{
 	padding:0 7px 0 7px;
 }
 .continutProduse{
-	
+
 }
 .listareProdus{
 	background:url(images/listareproduse_bgr.jpg) top no-repeat;
@@ -683,7 +683,7 @@ a:hover{
 	margin-left:-7px;
 }
 .contentDetailPage{
-	margin-bottom:13px;	
+	margin-bottom:13px;
 }
 .contentHeadline{
 		background:url(images/content_headline_bgr.jpg) left top no-repeat;
@@ -778,16 +778,16 @@ a:hover{
 		border:1px solid #FFF;
 }
 .productDetailProductsList{
-	margin:5px 0 0 6px;	
+	margin:5px 0 0 6px;
 }
 .productDetail form{
-	margin:10px 0 10px 19px;	
+	margin:10px 0 10px 19px;
 	line-height:19px;
 }
 .detailPriceBttn{
 	position:absolute;
 	bottom:18px;
-	left:19px;	
+	left:19px;
 }
 .detailPriceBttn H3{
 	font-size:17px;
@@ -803,7 +803,7 @@ a:hover{
 .detailBttn{
 	position:absolute;
 	bottom:21px;
-	left:177px;	
+	left:177px;
 }
 .detailBttn a{
 	width:125px;
@@ -844,11 +844,23 @@ a:hover{
 .copyright{
 	text-align:center;
 	font-size:11px;
-	color:#525252;	
+	color:#525252;
 	line-height:24px;
 }
 
 .page-title {
 	height:100px;
 	line-height:75px;
+}
+.account-create
+{
+    padding: 20px;
+    background-color:
+    white;
+    margin: 30px;
+}
+
+.my-account
+{
+    padding:20px;
 }

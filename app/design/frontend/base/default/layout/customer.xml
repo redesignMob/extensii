@@ -214,7 +214,7 @@ Customer account pages, rendered for all tabs in dashboard
         <remove name="sale.reorder.sidebar"/-->
         <!-- Mage_Customer -->
         <reference name="root">
-            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+            <action method="setTemplate"><template>page/2columns-left_My_Account.phtml</template></action>
         </reference>
 
         <reference name="content">
@@ -230,12 +230,12 @@ Customer account pages, rendered for all tabs in dashboard
                 <action method="addLink" translate="label" module="customer"><name>account_edit</name><path>customer/account/edit/</path><label>Account Information</label></action>
                 <action method="addLink" translate="label" module="customer"><name>address_book</name><path>customer/address/</path><label>Address Book</label></action>
             </block>
-            <block type="checkout/cart_sidebar" name="cart_sidebar" template="checkout/cart/sidebar.phtml">
+       <!-- <block type="checkout/cart_sidebar" name="cart_sidebar" template="checkout/cart/sidebar.phtml">
                 <action method="addItemRender"><type>simple</type><block>checkout/cart_item_renderer</block><template>checkout/cart/sidebar/default.phtml</template></action>
                 <action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>checkout/cart/sidebar/default.phtml</template></action>
                 <action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>checkout/cart/sidebar/default.phtml</template></action>
             </block>
-            <block type="catalog/product_compare_sidebar" name="catalog.compare.sidebar" template="catalog/product/compare/sidebar.phtml"/>
+            <block type="catalog/product_compare_sidebar" name="catalog.compare.sidebar" template="catalog/product/compare/sidebar.phtml"/>-->
             <remove name="tags_popular"/>
 
         </reference>
@@ -250,13 +250,13 @@ Customer account home dashboard layout
         <update handle="customer_account"/>
         <!-- Mage_Customer -->
         <reference name="root">
-            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+            <action method="setTemplate"><template>page/2columns-left_My_Account.phtml</template></action>
         </reference>
         <reference name="my.account.wrapper">
             <block type="customer/account_dashboard" name="customer_account_dashboard" template="customer/account/dashboard.phtml">
                 <block type="customer/account_dashboard_hello" name="customer_account_dashboard_hello" as="hello" template="customer/account/dashboard/hello.phtml"/>
                 <block type="core/template" name="customer_account_dashboard_top" as="top" />
-                <block type="customer/account_dashboard_info" name="customer_account_dashboard_info" as="info" template="customer/account/dashboard/info.phtml"/>
+              <block type="customer/account_dashboard_info" name="customer_account_dashboard_info" as="info" template="customer/account/dashboard/info.phtml"/>
                 <block type="customer/account_dashboard_newsletter" name="customer_account_dashboard_newsletter" as="newsletter" template="customer/account/dashboard/newsletter.phtml"/>
                 <block type="customer/account_dashboard_address" name="customer_account_dashboard_address" as="address" template="customer/account/dashboard/address.phtml"/>
             </block>
