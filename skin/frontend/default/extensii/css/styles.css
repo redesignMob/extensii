@@ -852,6 +852,10 @@ a:hover{
     margin:40px;
     line-height:45px;
 }
+.page-title  .checkout-types
+{
+    list-style-type: none;
+}
 .loginContainer {
     background:url(../images//login_bg.png) ;
 
@@ -1212,4 +1216,118 @@ margin-top: 5px;
 {
     margin-left:137px;
     margin-top:10px;
+}
+.a-center .input-text
+{
+    width:50px !important;
+}
+.cart-prod-name
+{
+    width:430px;
+}
+
+.cart
+{
+    padding:20px;
+    background-image: linear-gradient(bottom, rgb(235,148,180) 41%, rgb(230,133,185) 22%, rgb(245,191,215) 78%);
+    background-image: -o-linear-gradient(bottom, rgb(235,148,180) 41%, rgb(230,133,185) 22%, rgb(245,191,215) 78%);
+    background-image: -moz-linear-gradient(bottom, rgb(235,148,180) 41%, rgb(230,133,185) 22%, rgb(245,191,215) 78%);
+    background-image: -webkit-linear-gradient(bottom, rgb(235,148,180) 41%, rgb(230,133,185) 22%, rgb(245,191,215) 78%);
+    background-image: -ms-linear-gradient(bottom, rgb(235,148,180) 41%, rgb(230,133,185) 22%, rgb(245,191,215) 78%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.41, rgb(235,148,180)),
+        color-stop(0.22, rgb(230,133,185)),
+        color-stop(0.78, rgb(245,191,215))
+        );
+    margin: 30px;
+    box-shadow: 1px 1px 16px black;
+    border-radius: 10px;
+}
+li{
+    list-style-type: none;
+}
+.cart .page-title .checkout-types
+{
+  margin-left: 600px;
+}
+.cart .page-title form
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.cart-table
+{
+    text-align: center;
+}
+.discount
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.discount h2
+{
+    padding:10px;
+}
+.discount .discount-form label
+{
+    margin-left: 10px;
+}
+.shipping-form
+{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.shipping-form li label
+{
+    float:left;
+    margin-right: 15px;
+}
+.shipping-form li{
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.shipping-form li .input-box
+{
+    padding-left: 110px;
+}
+.shipping-form li .input-box select
+{
+    padding-left: 120px;
+}
+.shipping-form li .input-box .input-text
+{
+    margin: 0px !important;
+}
+.cart .totals
+{
+margin-left: 660px;
+
+}
+.cart .totals .checkout-types a
+{
+}
+.opc
+{
+     padding:20px;
+    background-image: linear-gradient(bottom, rgb(235,148,180) 41%, rgb(230,133,185) 22%, rgb(245,191,215) 78%);
+    background-image: -o-linear-gradient(bottom, rgb(235,148,180) 41%, rgb(230,133,185) 22%, rgb(245,191,215) 78%);
+    background-image: -moz-linear-gradient(bottom, rgb(235,148,180) 41%, rgb(230,133,185) 22%, rgb(245,191,215) 78%);
+    background-image: -webkit-linear-gradient(bottom, rgb(235,148,180) 41%, rgb(230,133,185) 22%, rgb(245,191,215) 78%);
+    background-image: -ms-linear-gradient(bottom, rgb(235,148,180) 41%, rgb(230,133,185) 22%, rgb(245,191,215) 78%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.41, rgb(235,148,180)),
+        color-stop(0.22, rgb(230,133,185)),
+        color-stop(0.78, rgb(245,191,215))
+        );
+    margin: 30px;
+    box-shadow: 1px 1px 16px black;
+    border-radius: 10px;
 }

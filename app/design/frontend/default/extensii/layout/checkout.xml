@@ -117,7 +117,7 @@ will be rendered on all checkout pages
         <remove name="left"/>
 
         <reference name="root">
-            <action method="setTemplate"><template>page/1column.phtml</template></action>
+            <action method="setTemplate"><template>page/2columns-right.phtml</template></action>
         </reference>
         <reference name="content">
             <block type="checkout/multishipping_state" name="checkout_state" template="checkout/multishipping/state.phtml"/>
@@ -300,12 +300,13 @@ One page checkout main layout
     <checkout_onepage_index translate="label">
         <label>One Page Checkout</label>
         <!-- Mage_Checkout -->
+        <!--
         <remove name="left"/>
-
+        -->
         <reference name="root">
-            <action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
         </reference>
-        <reference name="right">
+        <reference name="left">
             <action method="unsetChildren"></action>
             <block type="page/html_wrapper" name="checkout.progress.wrapper" translate="label">
                 <label>Checkout Progress Wrapper</label>
