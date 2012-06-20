@@ -31,7 +31,7 @@
         <?php if( sizeof($_orders->getItems()) > 0 ): ?><a href="<?php echo $this->getUrl('sales/order/history') ?>"><?php echo $this->__('View All') ?></a><?php endif; ?>
     </div>
 <?php if( sizeof($_orders->getItems()) > 0 ): ?>
-    <table class="data-table" id="my-orders-table">
+    <table class="data-table" id="my-orders-table" style="width:600px;" cellspacing="0" cellborder="0">
     <col width="1" />
     <col width="1" />
     <col />
@@ -40,12 +40,12 @@
     <col width="1" />
         <thead>
             <tr>
-                <th><?php echo $this->__('Order #') ?></th>
-                <th><?php echo $this->__('Date') ?></th>
-                <th><?php echo $this->__('Ship To') ?></th>
-                <th><span class="nobr"><?php echo $this->__('Order Total') ?></span></th>
-                <th><?php echo $this->__('Status') ?></th>
-                <th>&nbsp;</th>
+                <th width="15%"><?php echo $this->__('Order #') ?></th>
+                <th width="15%"><?php echo $this->__('Date') ?></th>
+                <th width="15%"><?php echo $this->__('Ship To') ?></th>
+                <th width="15%"><span class="nobr"><?php echo $this->__('Order Total') ?></span></th>
+                <th width="15%"><?php echo $this->__('Status') ?></th>
+                <th width="15%">&nbsp;</th>
             </tr>
         </thead>
         <tbody>

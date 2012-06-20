@@ -1456,3 +1456,25 @@ li{
     margin-top: 10px;
 
 }
+.ccsave label
+{
+    float:left;
+    line-height:30px;
+}
+.ccsave .input-box
+{
+    margin-left:180px !important;
+}
+#checkout-review-table  td.a-right span.price
+{
+    float: right;
+    margin-right: 16px;
+}
+#my-orders-table td
+{
+    text-align: center;
+}
+#my-orders-table td.last span.nobr a
+{
+    color:#942323;
+}
