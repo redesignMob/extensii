@@ -55,16 +55,7 @@
         </div>
     </div>
     <div class="content">
-    	<div class="navigation">
-    		<ul id="nav">
-			<li class=""><a href="<?php echo $this->getBaseUrl() ?>" class="">Home</a></li>
-			  <li class=""><a href="<?php echo $this->getBaseUrl() ?>" class="">Contact</a></li>
-			   <li class=""><a href="<?php echo $this->getUrl('products') ?>" class="">Produse</a></li>
-			    <li class=""><a href="<?php echo $this->getBaseUrl() ?>" class="">Despre noi</a></li>
-
-			    <div style="clear:both; width:1px; height:1px; visibility:hidden;"></div>
-			</ul>
-        </div>
+        <?php echo $this->getChildHtml('header') ?>
         <div class="slider_CelMaiVandut">
         	<?php echo $this->getLayout()->createBlock('catalog/product_list')->setCategoryId(6)->setTemplate('catalog/product/products_slider.phtml')->toHtml() ?>
             <?php echo $this->getLayout()->createBlock('catalog/product_list')->setTemplate('catalog/product/highsold_list.phtml')->toHtml() ?>

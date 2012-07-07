@@ -43,10 +43,10 @@
 <?php if($_menu): ?>
 <div class="navigation">
     <ul id="nav">
-        <?php /*echo $_menu */?>
 		<li class=""><a href="<?php echo $this->getBaseUrl() ?>" class="">Home</a></li>
 			  <li class=""><a href="<?php echo $this->getBaseUrl() ?>" class="">Contact</a></li>
-			   <li class=""><a href="<?php echo $this->getUrl('products') ?>" class="">Produse</a></li>
+                          <?php echo $_menu ?>
+<!--			   <li class=""><a href="<?php echo $this->getUrl('products') ?>" class="">Produse</a></li>-->
 			    <li class=""><a href="<?php echo $this->getBaseUrl() ?>" class="">Despre noi</a></li>
         <div style="clear:both; width:1px; height:1px; visibility:hidden;"></div>
     </ul>

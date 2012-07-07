@@ -291,9 +291,9 @@ class Mage_Catalog_Block_Navigation extends Mage_Core_Block_Template
         $htmlChildren = '';
         $j = 0;
 
-        if(count($activeChildren)) {
-        	$html[] = '</li>';
-        }
+//        if(count($activeChildren)) {
+//        	$html[] = '</li>';
+//        }
 
         foreach ($activeChildren as $child) {
             $htmlChildren .= $this->_renderCategoryMenuItemHtml(
