@@ -43,7 +43,7 @@ a:hover{
     width:322px;
     height:50px;
     border-radius: 0px 0px 12px 12px;
-    box-shadow: 0px 7px 28px #000;
+    box-shadow: 0px -3px 38px #A8A8A8 inset;
 }
 .topContact{
     line-height:22px;
@@ -63,6 +63,8 @@ a:hover{
     padding-right:15px;
 }
 .searchBox{
+    box-shadow: 0px 0px 10px black inset;
+    border-radius: 13px 13px 0 0;
     position:absolute;
     right:0;
     top:66px;
@@ -92,13 +94,17 @@ a:hover{
 /* Content Home */
 
 .content{
-
-    background-color:#F7EBF8;
+    padding:2px;
+   background-color:#F7EBF8;
     /*background:url(x.png) repeat-x top;*/
-    border:1px solid #FFFFFF;
-    box-shadow: 0px 0px 39px #000;
+    /*border:1px solid #FFFFFF;*/
+    box-shadow: 0px 0px 19px #000 inset;
+    border-radius: 10px;
 }
 .navigation{
+    margin-bottom:10px;
+    border-radius:10px 0px 10px 10px;
+    box-shadow: 0px 0px 10px #000 inset;
     height:45px;
     line-height:45px;
     background:url(../images//nav_bgr.jpg) repeat-x top;
@@ -121,10 +127,19 @@ a:hover{
     text-shadow: 0px 1px 1px #fff;
 }
 .navigation ul li a:hover{
+     box-shadow: 0px 0px 10px #000 inset;
     background:url(../images//nav_hover.jpg);
     color:#9A0039;
     text-decoration:none;
 }
+.navigation ul li a.firstElement:hover{
+     box-shadow: 0px 0px 10px #000 inset;
+    background:url(../images//nav_hover.jpg);
+    color:#9A0039;
+    text-decoration:none;
+    border-radius:10px 0px 0 10px;
+}
+
 .navigation ul li a.active{
     background:url(../images//nav_hover.jpg);
     color:#9A0039;
@@ -249,7 +264,7 @@ a:hover{
     background:url(../images//promotii_bgr.jpg) top no-repeat;
     width:960px;
     height:27px;
-    margin:0px 10px 0 10px;
+    margin:0 auto;
     position:relative;
 }
 .promotiiHeadline H1{
@@ -268,8 +283,8 @@ a:hover{
 .promotiiContainer{
     background:url(../images//promotii_container_bgr.jpg) top no-repeat;
     height:380px;
-    width:975px;
-    margin:7px 2px 0 2px;
+    width:960px;
+    margin:0 auto;
 }
 .promotiiBoxContainer{
     width:221px;
@@ -358,9 +373,13 @@ a:hover{
 }
 .mainMenu ul li{
     background:url(../images//menu1_bgr.png);
-    width:186px;
-    height:25px;
+    width:210px;
+    min-height:25px;*/
     line-height:14px;
+
+}
+.mainMenu ul li a.level-top{
+    line-height: 33px;
     padding-left:24px;
     padding-top:10px;
 }
@@ -380,6 +399,7 @@ a:hover{
     padding:0;
     margin:0;
     background:none;
+    height:25px;
 }
 .mainMenu ul ul li{
     width:179px;
@@ -828,8 +848,9 @@ a:hover{
 /* Footer */
 
 .footer{
+    margin:0 auto;
     height:140px;
-    width:979px;
+    width:960px;
     line-height:30px;
     font-size:10px;
     text-align:left;
@@ -1484,15 +1505,17 @@ li{
 /********** < Navigation */
 /* 2nd Level */
 #nav ul,
-#nav div { display:none }
-#nav div ul { position:static; width:auto; border:none; }
+#nav div { display:none; position:absolute;top:45px;z-index:500;width:200px;left:-15px;border-radius: 10px; }
+#nav div ul { position:absolute;top:36px; width:auto; border:none; }
+#nav li.parent {position: relative;}
+li.level-0  ul.level-0 { position:absolute;top:36px;}
 
 /* 3rd+ Level */
 #nav ul ul,
 #nav ul div { top:5px; }
 
-#nav ul li a { background:#ecf3f6; }
-#nav ul li a:hover { background:#d5e4eb; }
+#nav ul li a {  background:url('../images/nav_bgr.jpg') repeat-x top;box-shadow: 0px 0px 10px #000 inset; border-radius:0px 0px 10px 10px;}
+#nav ul li a:hover { background: url("../images//nav_hover.jpg") repeat scroll 0 0 transparent;}
 #nav ul li a,
 #nav ul li a:hover { color:#2f2f2f !important; }
 #nav ul span,

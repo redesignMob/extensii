@@ -31,54 +31,55 @@
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>">
-<head>
-<?php echo $this->getChildHtml('head') ?>
-</head>
-<body>
+    <head>
+        <?php echo $this->getChildHtml('head') ?>
+    </head>
+    <body>
 
 
-<div class="container">
-<div class="header">
-    	<div class="logo"><img src="<?php echo $this->getSkinUrl() ?>images/logo.png" alt="Home" /></div>
-        <div class="loginBox">
-       	  <div class="topContact"><span>Telefon:</span> 0740-123.456</div>
-            <div class="topLogin"><a href="<?php echo $this->getUrl('customer/account/login') ?>">Login</a>
-			<a href="<?php echo $this->getUrl('customer/account/create/') ?>">Inregistrare noua</a></div>
-        </div>
-        <div class="searchBox"><table width="100%" height="35" border="0" cellpadding="0" cellspacing="0">
-          <tr>
-            <td width="223"><?php echo $this->getLayout()->createBlock('checkout/cart_sidebar')->setTemplate('checkout/cart/header_cart.phtml')->toHtml() ?></td>
-            <td>
-            	<?php echo $this->getLayout()->createBlock('core/template')->setTemplate('catalogsearch/form.mini.phtml')->toHtml(); ?>
-            </td>
-          </tr>
-        </table>
-        </div>
-		</div>
-		<div class="content" style="background-color:#F4F4F4 !important;">
-		 <div class="loginContainer">
-
-<div class="wrapper">
-    <?php echo $this->getChildHtml('global_notices') ?>
-    <div class="page">
-        <?php echo $this->getChildHtml('header') ?>
-        <div class="main-container col1-layout">
-            <div class="main">
-			<?php echo $this->getChildHtml('menu'); ?>
-                <?php echo $this->getChildHtml('breadcrumbs') ?>
-                <div class="col-main">
-                    <?php echo $this->getChildHtml('global_messages') ?>
-                    <?php echo $this->getChildHtml('content') ?>
+        <div class="container">
+            <div class="header">
+                <div class="logo"><img src="<?php echo $this->getSkinUrl() ?>images/logo.png" alt="Home" /></div>
+                <div class="loginBox">
+                    <div class="topContact"><span>Telefon:</span> 0740-123.456</div>
+                    <div class="topLogin"><a href="<?php echo $this->getUrl('customer/account/login') ?>">Login</a>
+                        <a href="<?php echo $this->getUrl('customer/account/create/') ?>">Inregistrare noua</a></div>
+                </div>
+                <div class="searchBox"><table width="100%" height="35" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td width="223"><?php echo $this->getLayout()->createBlock('checkout/cart_sidebar')->setTemplate('checkout/cart/header_cart.phtml')->toHtml() ?></td>
+                            <td>
+                                <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('catalogsearch/form.mini.phtml')->toHtml(); ?>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
+            <?php echo $this->getChildHtml('header') ?>
+            <div class="content" style="background-color:#F4F4F4 !important;">
+                <div class="loginContainer">
+
+                    <div class="wrapper">
+                        <?php echo $this->getChildHtml('global_notices') ?>
+                        <div class="page">
+
+                            <div class="main-container col1-layout">
+                                <div class="main">
+                                    <?php echo $this->getChildHtml('menu'); ?>
+                                    <?php echo $this->getChildHtml('breadcrumbs') ?>
+                                    <div class="col-main">
+                                        <?php echo $this->getChildHtml('global_messages') ?>
+                                        <?php echo $this->getChildHtml('content') ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <?php echo $this->getChildHtml('mainFooter') ?>
+                </div>
+
+            </div>
         </div>
-     </div>
-
-    </div>
-<?php echo $this->getChildHtml('mainFooter') ?>
-</div>
-
-</div>
-</div>
-</body>
+    </body>
 </html>
