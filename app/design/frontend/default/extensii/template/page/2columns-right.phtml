@@ -61,8 +61,9 @@
         </table>
         </div>
     </div>
+    <?php echo $this->getChildHtml('header') ?>
     <div class="content">
-        <?php echo $this->getChildHtml('header') ?>
+
         <div class="slider_CelMaiVandut">
         	<?php echo $this->getLayout()->createBlock('catalog/product_list')->setCategoryId(6)->setTemplate('catalog/product/products_slider.phtml')->toHtml() ?>
             <?php echo $this->getLayout()->createBlock('catalog/product_list')->setTemplate('catalog/product/highsold_list.phtml')->toHtml() ?>
