@@ -41,8 +41,15 @@
     	<div class="logo"><img src="<?php echo $this->getSkinUrl() ?>images/logo.png" alt="Home" /></div>
         <div class="loginBox">
        	  <div class="topContact"><span>Telefon:</span> 0740-123.456</div>
-          <div class="topLogin"><a href="<?php echo $this->getUrl('customer/account/login') ?>">Login</a>
-		  <a href="<?php echo $this->getUrl('customer/account/create/') ?>">Inregistrare noua</a></div>
+          <div class="topLogin">
+                <?php if(!Mage::getSingleton('customer/session')->getCustomerId()): ?>  
+                    <a href="<?php echo $this->getUrl('customer/account/login') ?>">Login</a>
+                    <a href="<?php echo $this->getUrl('customer/account/create/') ?>">Inregistrare noua</a>
+                <?php else: ?>
+                    <a href="<?php echo $this->getUrl('customer/account/logout') ?>">Logout</a>
+                    <a href="<?php echo $this->getUrl('customer/account/') ?>">Contul Meu</a>
+                <?php endif; ?>
+		  </div>
         </div>
         <div class="searchBox"><table width="100%" height="35" border="0" cellpadding="0" cellspacing="0">
           <tr>
