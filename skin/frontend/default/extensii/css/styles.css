@@ -32,8 +32,8 @@ a:hover{
 }
 .logo{
     position:absolute;
-    left:0;
-    top:0;
+    left:50px;
+    top:10px;
 }
 .loginBox{
     position:absolute;
@@ -43,7 +43,7 @@ a:hover{
     width:322px;
     height:50px;
     border-radius: 0px 0px 12px 12px;
-    box-shadow: 0px -3px 38px #A8A8A8 inset;
+    box-shadow: 0px -3px 38px #4D4D4D inset;
 }
 .topContact{
     line-height:22px;
@@ -63,6 +63,7 @@ a:hover{
     padding-right:15px;
 }
 .searchBox{
+    margin-top:20px;
     box-shadow: 0px 0px 10px black inset;
     border-radius: 13px 13px 0 0;
     position:absolute;
@@ -102,6 +103,7 @@ a:hover{
     border-radius: 10px;
 }
 .navigation{
+    margin-top:20px;
     margin-bottom:10px;
     border-radius:10px 0px 10px 10px;
     box-shadow: 0px 0px 10px #000 inset;
@@ -123,7 +125,7 @@ a:hover{
 .navigation ul li a{
     float:left;
     color:#636363;
-    padding:0 15px 0 15px;
+    padding:0 25px 0 25px;
     text-shadow: 0px 1px 1px #fff;
 }
 .navigation ul li a:hover{
@@ -357,11 +359,12 @@ a:hover{
     font-size:12px;
     font-weight:bold;
     padding-left:37px;
-    background:url(../images//menu_headline.jpg) no-repeat;
+    background:url(../images//contact_headline_bgr.jpg) no-repeat;
 }
 .mainMenu{
     display:block;
     width:212px;
+    min-height:200px;
     background:url(../images//menu_bgr.jpg) top no-repeat;
 }
 .mainMenu ul{
@@ -448,7 +451,7 @@ a:hover{
     font-size:12px;
     font-weight:bold;
     padding-left:37px;
-    background:url(../images//cosulmeu_headline.jpg) no-repeat;
+    background:url(../images//contact_headline_bgr.jpg) no-repeat;
     text-shadow: 0px 1px 1px #fff;
 }
 .cosulMeuContainer{
@@ -532,7 +535,7 @@ a:hover{
     font-size:12px;
     font-weight:bold;
     padding-left:29px;
-    background:url(../images//leftboxheadline.jpg) no-repeat;
+    background:url(../images//contact_headline_bgr.jpg) no-repeat;
     text-shadow: 0px 1px 1px #fff;
 }
 .NewsletterBgr{
@@ -642,7 +645,7 @@ a:hover{
 }
 .listareProdusImgHolder{
     margin:12px 11px 8px 10px;
-    border:1px solid #D0D0D8;
+
 }
 .listareProdusImgHolder img{
     border:1px solid #fff;
@@ -1505,7 +1508,8 @@ li{
 /********** < Navigation */
 /* 2nd Level */
 #nav ul,
-#nav div { display:none; position:absolute;top:45px;z-index:500;width:200px;left:-15px;border-radius: 10px; }
+#nav div { display:none; position:absolute;top:45px;z-index:500;width:250px;left:0px;border-radius: 10px; }
+#nav ul .level0 {width:300px;}
 #nav div ul { position:absolute;top:36px; width:auto; border:none; }
 #nav li.parent {position: relative;}
 li.level-0  ul.level-0 { position:absolute;top:36px;}
@@ -1514,12 +1518,14 @@ li.level-0  ul.level-0 { position:absolute;top:36px;}
 #nav ul ul,
 #nav ul div { top:5px; }
 
-#nav ul li a {  background:url('../images/nav_bgr.jpg') repeat-x top;box-shadow: 0px 0px 10px #000 inset; border-radius:0px 0px 10px 10px;}
+#nav ul li a {  background:url('../images/nav_bgr.jpg') repeat-x top;box-shadow: 0px 0px 10px #000 inset;}
 #nav ul li a:hover { background: url("../images//nav_hover.jpg") repeat scroll 0 0 transparent;}
 #nav ul li a,
-#nav ul li a:hover { color:#2f2f2f !important; }
+#nav ul li a:hover { color:#2f2f2f !important;width:250px; }
 #nav ul span,
 #nav ul li.last li span { padding:3px 15px 4px 15px; }
+#nav li.over a.over {background: url("../images//nav_hover.jpg") repeat scroll 0 0 transparent;box-shadow: 0px 0px 10px #000 inset;}
+#nav .level0 li.last a{ border-radius:0px 0px 10px 10px;}
 
 /* Show menu */
 #nav li ul.shown-sub,
@@ -1528,3 +1534,11 @@ li.level-0  ul.level-0 { position:absolute;top:36px;}
 #nav li .shown-sub li div.shown-sub { left:100px; }
 /********** Navigation > */
 /* ======================================================================================= */
+.product-image img {
+    margin-left: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 25px black;
+}
+.more-views {margin-top: 67px;}
+.more-views li {float:left;margin-right:10px;}
+.listareProdusImgHolder a img {margin:0 !important;}

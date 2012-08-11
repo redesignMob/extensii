@@ -1,0 +1,424 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <magazento translate="label">
+            <label>Magazento.com</label>
+            <sort_order>250</sort_order>
+        </magazento>
+    </tabs>
+    <sections>
+        <colorbox translate="label" module="colorbox">
+            <label>ColorBox</label>
+            <tab>magazento</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <settings translate="label">
+                    <label>Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enable translate="label">
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>colorbox/source_boolean</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </enable>
+                        <skin translate="label">
+                            <label>Colorbox skin</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>colorbox/source_skin</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </skin>                        
+                        <transition translate="label">
+                            <label>Transition</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>colorbox/source_transition</source_model>
+                            <comment>
+                                The transition type. Can be set to "elastic", "fade", or "none".
+                            </comment>                                
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </transition>  
+                        <speed translate="label">
+                            <label>Title text</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>22</sort_order>
+                            <comment>
+                                Sets the speed of the fade and elastic transitions, in milliseconds.
+                            </comment>                            
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </speed>                        
+
+                        
+                        <scalephotos translate="label">
+                            <label>scalePhotos</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>colorbox/source_boolean</source_model>
+                            <comment>
+                                If true, and if maxWidth, maxHeight, innerWidth, innerHeight, width, or height have been defined, ColorBox will scale photos to fit within the those values.
+                            </comment>                                
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </scalephotos>                        
+                        <scrolling translate="label">
+                            <label>scalePhotos</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>colorbox/source_boolean</source_model>
+                            <comment>
+                                If false, ColorBox will hide scrollbars for overflowing content. This could be used on conjunction with the resize method (see below) for a smoother transition if you are appending content to an already open instance of ColorBox.
+                            </comment>                                
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </scrolling>                        
+                        <opacity translate="label">
+                            <label>scalePhotos</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>colorbox/source_boolean</source_model>
+                            <comment>
+                                The overlay opacity level. Range: 0 to 1.
+                            </comment>                                
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </opacity>                        
+                        <open translate="label">
+                            <label>scalePhotos</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>colorbox/source_boolean</source_model>
+                            <comment>
+                                If true, ColorBox will immediately open.
+                            </comment>                                
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </open>                        
+                        <returnfocus translate="label">
+                            <label>returnFocus</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>colorbox/source_boolean</source_model>
+                            <comment>
+                                If true, focus will be returned when ColorBox exits to the element it was launched from.
+                            </comment>                                
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </returnfocus>                        
+                        <overlayclose translate="label">
+                            <label>overlayClose</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>colorbox/source_boolean</source_model>
+                            <comment>
+                               If false, disables closing ColorBox by clicking on the background overlay.
+                            </comment>                                
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </overlayclose>                        
+                        <esckey translate="label">
+                            <label>escKey</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>colorbox/source_boolean</source_model>
+                            <comment>
+                                If false, will disable closing colorbox on 'esc' key press.
+                            </comment>                                
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </esckey>                        
+                        <arrowkey translate="label">
+                            <label>scalePhotos</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>colorbox/source_boolean</source_model>
+                            <comment>
+                                If false, will disable the left and right arrow keys from navigating between the items in a group.
+                            </comment>                                
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </arrowkey>                        
+                        <loop translate="label">
+                            <label>Loop</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>colorbox/source_boolean</source_model>
+                            <comment>
+                               If false, will disable the ability to loop back to the beginning of the group when on the last element.
+                            </comment>                                
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </loop>                        
+                        
+                        
+                    </fields>
+                </settings>
+                <internationalization translate="label">
+                    <label>Internationalization</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <current translate="label">
+                            <label>returnFocus</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>
+                                Text or HTML for the group counter while viewing a group. {current} and {total} are detected and replaced with actual numbers while ColorBox runs.
+                            </comment>                                
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </current>                        
+                        <previous translate="label">
+                            <label>returnFocus</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>
+                                Text or HTML for the previous button while viewing a group.
+                            </comment>                                
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </previous>                        
+                        <next translate="label">
+                            <label>returnFocus</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>
+                               Text or HTML for the next button while viewing a group.
+                            </comment>                                
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </next>                        
+                        <close translate="label">
+                            <label>returnFocus</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>
+                               Text or HTML for the close button. The 'esc' key will also close ColorBox.
+                            </comment>                                
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </close>                        
+                        
+                        
+                    </fields>
+                </internationalization>
+                <dimensions translate="label">
+                    <label>Dimensions</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <width translate="label">
+                            <label>Width</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>
+                               Set a fixed total width. This includes borders and buttons. Example: "100%", "500px", or 500
+                            </comment>                                
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </width>                        
+                        <height translate="label">
+                            <label>Height</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>
+                                Set a fixed total height. This includes borders and buttons. Example: "100%", "500px", or 500
+                            </comment>                                
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </height>  
+                        
+                        <innerwidth translate="label">
+                            <label>innerWidth</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>
+                                This is an alternative to 'width' used to set a fixed inner width. This excludes borders and buttons. Example: "50%", "500px", or 500
+                            </comment>                                
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </innerwidth>                        
+                        <innerheight translate="label">
+                            <label>innerHeight</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>
+                                This is an alternative to 'height' used to set a fixed inner height. This excludes borders and buttons. Example: "50%", "500px", or 500
+                            </comment>                                
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </innerheight>                        
+                        
+                        <initialwidth translate="label">
+                            <label>initialWidth</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>
+                                Set the initial width, prior to any content being loaded.
+                            </comment>                                
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </initialwidth>                        
+                        <initialheight translate="label">
+                            <label>initialHeight</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>
+                                Set the initial height, prior to any content being loaded.
+                            </comment>                                
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </initialheight>                        
+                        
+                        <maxwidth translate="label">
+                            <label>maxWidth</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>
+                                Set a maximum width for loaded content. Example: "100%", 500, "500px"
+                            </comment>                                
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </maxwidth>                        
+                        <maxheight translate="label">
+                            <label>maxHeight</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>
+                                Set a maximum height for loaded content. Example: "100%", 500, "500px"
+                            </comment>                                
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </maxheight>                        
+                        
+                        
+                    </fields>
+                </dimensions>
+                <slideshow translate="label">
+                    <label>Slideshow</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>50</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <slideshow translate="label">
+                            <label>Slideshow</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>colorbox/source_boolean</source_model>
+                            <comment>
+                               If true, adds an automatic slideshow to a content group / gallery.
+                            </comment>                                
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </slideshow>    
+                        
+                        <slideshowspeed translate="label">
+                            <label>slideshowSpeed</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>
+                                Sets the speed of the slideshow, in milliseconds.
+                            </comment>                                
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </slideshowspeed>  
+                        
+                        <slideshowauto translate="label">
+                            <label>slideshowAuto</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>colorbox/source_boolean</source_model>
+                            <comment>
+                                If true, the slideshow will automatically start to play.
+                            </comment>                                
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </slideshowauto>  
+                        
+                        <slideshowstart translate="label">
+                            <label>slideshowStart</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>
+                                Text for the slideshow start button.
+                            </comment>                                
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </slideshowstart>                        
+                        
+                        <slideshowstop translate="label">
+                            <label>slideshowStop</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>
+                                Text for the slideshow stop button
+                            </comment>                                
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </slideshowstop>                        
+                        
+                        
+                    </fields>
+                </slideshow>
+                <developer>
+                    <frontend_model>colorbox/developer</frontend_model>
+                    <sort_order>999</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </developer>                
+            </groups>
+        </colorbox>
+    </sections>
+</config>

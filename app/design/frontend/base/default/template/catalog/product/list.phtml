@@ -42,7 +42,7 @@
 <?php foreach ($_productCollection as $_product): ?>
 	<div class="listareProdus">
 		<h1><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_productNameStripped; ?>"><?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?></a></h1>
-		<div class="listareProdusImgHolder"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image'); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" /></a></div>
+		<div class="listareProdusImgHolder"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image"><img width="220" height="120" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image'); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" /></a></div>
 		<div><p><?php echo number_format($_product->getFinalPrice(),0,',','.') ?> RON</p><a href="#" class="cumpar">Cumpar</a></div>
 		<div class="clear"></div>
 	</div>

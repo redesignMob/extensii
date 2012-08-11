@@ -1,0 +1,80 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="<?php echo $this->getSkinUrl('magazento/colorbox/jquery.colorbox.js') ?>" type="text/javascript"></script>
+<link rel="stylesheet" 
+      href="<?php echo $this->getSkinUrl("magazento/colorbox/". Mage::getStoreConfig('colorbox/settings/skin') ."/colorbox.css") ?>" type="text/css" media="screen" />        
+
+<script>
+        jQuery.noConflict();
+        jQuery(document).ready(function(){
+                //Examples of how to assign the ColorBox event to elements
+                jQuery(".magazento-colorbox").colorbox(
+                    {
+                        rel:'magazento-colorbox',
+                        transition: "<?php echo Mage::getStoreConfig('colorbox/settings/transition') ?>",
+                        speed: <?php echo Mage::getStoreConfig('colorbox/settings/speed') ?>,   
+                        scalePhotos: <?php echo Mage::getStoreConfig('colorbox/settings/scalephotos') ?>,
+                        scrolling: <?php echo Mage::getStoreConfig('colorbox/settings/scrolling') ?>,
+                        opacity: <?php echo Mage::getStoreConfig('colorbox/settings/opacity') ?>,                        
+                        open: <?php echo Mage::getStoreConfig('colorbox/settings/open') ?>,  
+                        returnFocus: <?php echo Mage::getStoreConfig('colorbox/settings/returnfocus') ?>,
+                        overlayClose: <?php echo Mage::getStoreConfig('colorbox/settings/overlayclose') ?>,	                        
+                        escKey: <?php echo Mage::getStoreConfig('colorbox/settings/esckey') ?>,                        
+                        arrowKey: <?php echo Mage::getStoreConfig('colorbox/settings/arrowkey') ?>,
+                        loop: <?php echo Mage::getStoreConfig('colorbox/settings/loop') ?>,
+
+                        width: <?php echo Mage::getStoreConfig('colorbox/dimensions/width') ?>,
+                        initialWidth: "<?php echo Mage::getStoreConfig('colorbox/dimensions/initialwidth') ?>",
+                        innerWidth: <?php echo Mage::getStoreConfig('colorbox/dimensions/initialheight') ?>,
+                        maxWidth: <?php echo Mage::getStoreConfig('colorbox/dimensions/maxwidth') ?>,
+                        
+                        height: <?php echo Mage::getStoreConfig('colorbox/dimensions/height') ?>,
+                        initialHeight: "<?php echo Mage::getStoreConfig('colorbox/dimensions/initialheight') ?>",
+                        innerHeight: <?php echo Mage::getStoreConfig('colorbox/dimensions/innerheight') ?>,
+                        maxHeight: <?php echo Mage::getStoreConfig('colorbox/dimensions/maxheight') ?>,
+                        
+                        current: "<?php echo Mage::getStoreConfig('colorbox/internationalization/current') ?>",
+                        previous: "<?php echo Mage::getStoreConfig('colorbox/internationalization/previous') ?>",
+                        next: "<?php echo Mage::getStoreConfig('colorbox/internationalization/next') ?>",
+                        close: "<?php echo Mage::getStoreConfig('colorbox/internationalization/close') ?>",
+                        
+                        slideshow: <?php echo Mage::getStoreConfig('colorbox/slideshow/slideshow') ?>,
+                        slideshowAuto: <?php echo Mage::getStoreConfig('colorbox/slideshow/slideshowauto') ?>,
+                        slideshowSpeed: <?php echo Mage::getStoreConfig('colorbox/slideshow/slideshowspeed') ?>,
+                        slideshowStart: "<?php echo Mage::getStoreConfig('colorbox/slideshow/slideshowstart') ?>",
+                        slideshowStop: "<?php echo Mage::getStoreConfig('colorbox/slideshow/slideshowstop') ?>"                     
+            
+                    }
+            );
+        });
+</script>
+        
+        
+    
+<?php
+    $_product = $this->getProduct();
+    $_helper = $this->helper('catalog/output');
+?>
+<p class="product-image">
+    <a class="magazento-colorbox" href="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize(265); ?>">
+        <?php
+            $_img = '<img src="'.$this->helper('catalog/image')->init($_product, 'image')->resize(265).'" alt="'.$this->htmlEscape($this->getImageLabel()).'" title="'.$this->htmlEscape($this->getImageLabel()).'" />';
+            echo $_helper->productAttribute($_product, $_img, 'image');
+        ?>
+    </a>
+</p>
+
+<?php if (count($this->getGalleryImages()) > 0): ?>
+<div class="more-views">
+    <h2><?php echo $this->__('More Views') ?></h2>
+    <ul>
+    <?php foreach ($this->getGalleryImages() as $_image): ?>
+        <li>
+            <a class="magazento-colorbox" href="<?php echo $_image['url']; ?>"  title="<?php echo $this->htmlEscape($_image->getLabel()) ?>">
+                <img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(56); ?>" 
+                     width="56" height="56" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>" />
+            </a>
+        </li>
+    <?php endforeach; ?>
+    </ul>
+</div>
+<?php endif; ?>
