@@ -40,7 +40,9 @@
 <body>
 <div class="container">
 	<div class="header">
-    	<div class="logo"><img src="<?php echo $this->getSkinUrl() ?>images/logo.png" alt="Home" /></div>
+    	<div class="logo">
+            <a href="<?php echo $this->getBaseUrl('') ?>" ><img src="<?php echo $this->getSkinUrl() ?>images/logo.png" alt="Home" /></a>
+        </div>
         <div class="loginBox">
        	  <div class="topContact"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('header-phone-nr ')->toHtml() ?></div>
           <div class="topLogin"><a href="<?php echo $this->getUrl('customer/account')?>">Contul Meu</a><a href="<?php echo $this->getUrl('checkout/cart') ?>">Finalizare Comanda</a></div>
