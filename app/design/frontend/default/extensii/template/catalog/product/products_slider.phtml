@@ -9,6 +9,10 @@
 	<div id="slider_items" style="position:relative;overflow:hidden;width:737px;height:358px">
 		<?php foreach ($_productCollection as $index=>$_product): $_i++; ?>
 			<div id="slide-<?php echo $_i ?>" class="slider">
+                            <div style="position:absolute;right:7px;top:5px;">
+                            <a href="http://messenger.yahoo.com/edit/send/?.target=YOUR_YAHOO_ID">
+                <img border="0" src="http://opi.yahoo.com/yahooonline/u=buenobia.shop/m=g/t=2/l=us/opi.jpg">
+                </a></div>
 				<img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(737,358); ?>" />
 				<p>Tip Produs: <span>Extensii cu Clip</span><br />
 				Cod Produs: <span><?php echo $_product->getSku() ?></span><br />
@@ -21,6 +25,7 @@
 	<div class="sliderNavigator">
     	<div class="sliderArrows"><a href="#"><img src="<?php echo $this->getSkinUrl() ?>images/slider_arrow_l.jpg" alt="left" /></a><a href="#"><img src="<?php echo $this->getSkinUrl() ?>images/slider_arrow_r.jpg" alt="next" /></a></div>
         <div class="sliderCircles">
+
         	<?php for($i=1;$i<=$_productCollection->count();$i++) : ?>
         		<a href="#"><img id="slide-circle-<?php echo $i ?>" src="<?php echo $this->getSkinUrl() ?>images/slider_circle_active.jpg" alt="active" /></a>
         	<?php endfor; ?>

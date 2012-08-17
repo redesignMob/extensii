@@ -31,69 +31,113 @@
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>">
-<head>
-<?php echo $this->getChildHtml('head') ?>
-</head>
+    <head>
+        <?php echo $this->getChildHtml('head') ?>
+    </head>
 
-<body>
-<div class="container">
-	<div class="header">
-    	<div class="logo">
-             <a href="<?php echo $this->getBaseUrl('') ?>" ><img src="<?php echo $this->getSkinUrl() ?>images/logo.png" alt="Home" /></a></div>
-        <div class="loginBox">
-       	  <div class="topContact"><span>Telefon:</span> 0740-123.456 </div>
-          <div class="topLogin">
-                <?php if(!Mage::getSingleton('customer/session')->getCustomerId()): ?>
-                    <a href="<?php echo $this->getUrl('customer/account/login') ?>">Login</a>
-                    <a href="<?php echo $this->getUrl('customer/account/create/') ?>">Inregistrare noua</a>
-                <?php else: ?>
-                    <a href="<?php echo $this->getUrl('customer/account/logout') ?>">Logout</a>
-                    <a href="<?php echo $this->getUrl('customer/account/') ?>">Contul Meu</a>
-                <?php endif; ?>
-		  </div>
-        </div>
-        <div class="searchBox"><table width="100%" height="35" border="0" cellpadding="0" cellspacing="0">
-          <tr>
-            <td width="223"><?php echo $this->getLayout()->createBlock('checkout/cart_sidebar')->setTemplate('checkout/cart/header_cart.phtml')->toHtml() ?></td>
-            <!--<td> <a href="http://messenger.yahoo.com/edit/send/?.target=YOUR_YAHOO_ID">
-                <img border="0" src="http://opi.yahoo.com/yahooonline/u=buenobia.shop/m=g/t=2/l=us/opi.jpg">
-                </a>
-            </td>-->
-            <td>
-            	<?php echo $this->getLayout()->createBlock('core/template')->setTemplate('catalogsearch/form.mini.phtml')->toHtml(); ?>
-            </td>
-          </tr>
-        </table>
-        </div>
-    </div>
-    <?php echo $this->getChildHtml('header') ?>
-    <div class="content">
-
-        <div class="slider_CelMaiVandut">
-        	<?php echo $this->getLayout()->createBlock('catalog/product_list')->setCategoryId(6)->setTemplate('catalog/product/products_slider.phtml')->toHtml() ?>
-            <?php echo $this->getLayout()->createBlock('catalog/product_list')->setTemplate('catalog/product/highsold_list.phtml')->toHtml() ?>
-        </div></div>
-        <div class="promotiiBox">
-        	<div class="promotiiHeadline">
-        	  <h1>Promotii</h1>
-              <a href="#">Mai Multe Promotii</a>
-        	</div>
-            <div class="promotiiContainer">
-				<?php echo $this->getLayout()->createBlock('catalog/product_list')->setCategoryId(5)->setTemplate('catalog/product/promo_list.phtml')->toHtml() ?>
-                <div style="margin-top: 50px;float: right;width: 225px;margin-top: 50px"> <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FBuenoBia&amp;width=222&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;border_color=#A8A8A8&amp;stream=false&amp;header=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:222px; height:290px;" allowTransparency="true"></iframe>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <a href="<?php echo $this->getBaseUrl('') ?>" ><img src="<?php echo $this->getSkinUrl() ?>images/logo.png" alt="Home" /></a></div>
+                <div class="loginBox">
+                    <div class="topContact"><span>Telefon:</span> 0740-123.456 </div>
+                    <div class="topLogin">
+                        <?php if (!Mage::getSingleton('customer/session')->getCustomerId()): ?>
+                            <a href="<?php echo $this->getUrl('customer/account/login') ?>">Login</a>
+                            <a href="<?php echo $this->getUrl('customer/account/create/') ?>">Inregistrare noua</a>
+                        <?php else: ?>
+                            <a href="<?php echo $this->getUrl('customer/account/logout') ?>">Logout</a>
+                            <a href="<?php echo $this->getUrl('customer/account/') ?>">Contul Meu</a>
+                        <?php endif; ?>
+                    </div>
                 </div>
-                <div class="clear"></div>
+                <div class="searchBox"><table width="100%" height="35" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td width="223"><?php echo $this->getLayout()->createBlock('checkout/cart_sidebar')->setTemplate('checkout/cart/header_cart.phtml')->toHtml() ?></td>
+                            <!--<td> <a href="http://messenger.yahoo.com/edit/send/?.target=YOUR_YAHOO_ID">
+                                <img border="0" src="http://opi.yahoo.com/yahooonline/u=buenobia.shop/m=g/t=2/l=us/opi.jpg">
+                                </a>
+                            </td>-->
+                            :))
+                            <td>
+                                <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('catalogsearch/form.mini.phtml')->toHtml(); ?>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-        </div>
-        <!--
-        <div class="footer"><a href="#">EXTENSII DE PAR NATURAL</a> | <a href="#">EXTENSII DE PAR CHERATINA</a> | <a href="#">EXTENSII DE PAR CLIP-ON</a> | <a href="#">EXTENSII DE PAR MICRORING</a> | <a href="#">PERUCI DIN PAR NATURAL</a> | <a href="#">COZI DE PAR</a> </div>
-        -->
-        <?php echo $this->getChildHtml('mainFooter') ?>
-    </div>
-</div>
-</body>
+            <?php echo $this->getChildHtml('header') ?>
+            <div class="content">
 
-</html>
+                <div class="slider_CelMaiVandut">
+                    <?php echo $this->getLayout()->createBlock('catalog/product_list')->setCategoryId(6)->setTemplate('catalog/product/products_slider.phtml')->toHtml() ?>
+                    <?php echo $this->getLayout()->createBlock('catalog/product_list')->setTemplate('catalog/product/highsold_list.phtml')->toHtml() ?>
+                </div></div>
+            <div class="promotiiBox">
+                <div class="promotiiHeadline">
+                    <h1>Promotii</h1>
+                    <a href="#">Mai Multe Promotii</a>
+                </div>
+                <div class="promotiiContainer">
+                    <?php echo $this->getLayout()->createBlock('catalog/product_list')->setCategoryId(5)->setTemplate('catalog/product/promo_list.phtml')->toHtml() ?>
+                    <div style="margin-top: 50px;float: right;width: 225px;margin-top: 50px"> <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FBuenoBia&amp;width=222&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;border_color=#A8A8A8&amp;stream=false&amp;header=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:222px; height:290px;" allowTransparency="true"></iframe>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+
+            </div>
+            <div class="promotiiBox">
+                <div class="promotiiHeadline">
+                    <h1>Despre Extensii</h1>
+
+                </div>
+                <div class="homeContentEdit">
+
+                    <p style="font-size:13px; overflow:auto">
+                        <b>Buenobia.ro</b> este un magazin care se adreseaza femeilor care doresc sa isi imbunatateasca look-ul dandu-i parului volum cu ajutorul extensiilor din par natural. Avem foarte mult succes in competitia de pe piata din cauza preturilor noastre mici, produselor de inalta calitate, serviciilor de livrare si de promovare.<br>
+                            <br>
+                                Va puteti bucura de o gama larga de extensii din par natural de cea mai inalta calitate. Oferim  o varietate de lungimi de la 30 cm pana la 70 cm si o gama larga de nuante.<br>
+                                    Ne-am straduit sa oferim clientilor nostri din intreaga lume par natural de cea mai inalta calitate. Datorita experientei si furnizorilor nostri din India suntem capabili sa oferim extensii din par natural la cele mai mici preturi.<br>
+                                        <br>
+                                            Motivul pentru care extensiile din par natural sunt atractive pentru toate femeile este ca acestea permit oricarei femei sa aiba instantaneu o coafura diferita. Acest lucru este benefic oricarei femei, pentru ca toate femeile doresc sa fie frumoase si sa aiba un par cu volum bogat. Cu ajutorul extensiilor din par natural puteti realiza acest lucru, iar daca va faceti timp pentru a le aplica in mod corespunzator va puteti realiza toate tipurile de coafuri la care visati.<br>
+                                                <br>
+                                                    Datorita volumului si aspectului pe care il ofera extensiile de par natural va garantam ca va veti spori increderea in dumneavoastra si ca va veti simti minunat cu o coafura asemeni vedetelor. De asemenea le puteti folosi daca doriti sa va lasati parul dumneavoastra sa creasca intr-un stil nou pe care il doriti. <br>
+                                                        <br>
+                                                            Majoritatea femeilor au auzit de extensiile de par Remy, si intr-adevar multe femei folosesc deja extensiile de par in mod regulat deoarece ele sunt concepute sa dureze mai mult. Daca sunt intretinute corect le puteti utiliza pentru un timp indelungat. <br>
+                                                                <br>
+                                                                    De ce folosesc celebritatile extensiile de par? O vedeta poate sa aiba un look superb atunci cand participca la o premiera a unui film sau la diverse evenimente importante. Cateva dintre vedetele care folosesc extensii de par sunt: Lady Gaga, Rihanna, Cheryl Cole, Sapphire Elia, Gemma Collins, Emma Noble, Jennifer Ellison, Peaches Geldof, Kimberley Walsh, Rachel Hunter, Lisa Scott Lee, Melinda Messenger, Michelle Heaton, Sarah Harding, Katie Price.<br>
+                                                                        <br>
+                                                                            Cele mai multe femei cred ca pentru aplicarea corecta a extensiilor de tip clip on au nevoie de un hair stylist professional, acest lucru nu este adevarat, acest tip de extensii le puteti aplica dumneavoastra fara ajutor in doar cateva minute.<br>
+                                                                                Exista o gama larga de extensii de par care va ofera posibilitatea sa alegeti care tip de extensii de par vi s-ar potrivi cel mai bine.<br>
+                                                                                    <br>
+                                                                                        <b>De ce sa alegeti Buenobia.ro?</b><br>
+                                                                                            -  Oferim cele mai mici preturi<br>
+                                                                                                -  Nu numai ca suntem mandri de produsele noastre, dar oferim, de asemenea, servicii de invidiat pentru clientii nostri.<br>
+                                                                                                    <br>
+                                                                                                        <b>Noi promitem:</b><br>
+                                                                                                            -  Sa livram in cel mai scurt timp posibil si in cele mai bune conditii produsele comandate de dumneavoastra<br>
+                                                                                                                -  Pozele care le vedeti sunt pozele reale ale produselor, iar fetele din imagini sunt ca titlu de prezentare<br>
+                                                                                                                    -   Parul folosit pentru extensii este de cea mai inalta calitate<br>
+                                                                                                                        -   Clientii nostri sunt pe primul plan, iar satisfactia lor este cea mai importanta pentru noi
+
+                                                                                                                        </p>
+
+                                                                                                                        </div>
+
+
+
+                                                                                                                        </div>
+                                                                                                                        <!--
+                                                                                                                        <div class="footer"><a href="#">EXTENSII DE PAR NATURAL</a> | <a href="#">EXTENSII DE PAR CHERATINA</a> | <a href="#">EXTENSII DE PAR CLIP-ON</a> | <a href="#">EXTENSII DE PAR MICRORING</a> | <a href="#">PERUCI DIN PAR NATURAL</a> | <a href="#">COZI DE PAR</a> </div>
+                                                                                                                        -->
+  <?php echo $this->getChildHtml('mainFooter') ?>
+    </div>
+          </div>
+        </body>
+
+    </html>
 
 
 

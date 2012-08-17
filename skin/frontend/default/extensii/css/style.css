@@ -866,3 +866,8 @@ a:hover{
 {
     padding:20px;
 }
+.homeContentEdit
+{   height:300px;
+    padding:10px;
+    overflow-x:scroll;
+}
