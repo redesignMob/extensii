@@ -90,14 +90,17 @@
                 <?php echo $this->getChildHtml('persistent.remember.me'); ?>
             </ul>
             <input name="context" type="hidden" value="checkout" />
+             <a href="<?php echo $this->getUrl('customer/account/forgotpassword') ?>" class="f-left"><?php echo $this->__('Forgot your password?') ?></a>
+            <button type="submit" class="button" onclick="onepageLogin(this)"><span><span><?php echo $this->__('Login') ?></span></span></button>
         </fieldset>
+
         </form>
+      <br/>   <p class="required"><?php echo $this->__('* Required Fields') ?></p>
     </div>
 </div>
 <div class="col2-set">
     <div class="col-1">
         <div class="buttons-set">
-            <p class="required">&nbsp;</p>
             <?php if ($this->getQuote()->isAllowedGuestCheckout()): ?>
                 <button id="onepage-guest-register-button" type="button" class="button" onclick="checkout.setMethod();"><span><span><?php echo $this->__('Continue') ?></span></span></button>
             <?php else: ?>
@@ -107,13 +110,7 @@
             <?php endif; ?>
         </div>
     </div>
-    <div class="col-2">
-        <div class="buttons-set">
-            <p class="required"><?php echo $this->__('* Required Fields') ?></p>
-            <a href="<?php echo $this->getUrl('customer/account/forgotpassword') ?>" class="f-left"><?php echo $this->__('Forgot your password?') ?></a>
-            <button type="submit" class="button" onclick="onepageLogin(this)"><span><span><?php echo $this->__('Login') ?></span></span></button>
-        </div>
-    </div>
+    
 </div>
 <script type="text/javascript">
 //<![CDATA[

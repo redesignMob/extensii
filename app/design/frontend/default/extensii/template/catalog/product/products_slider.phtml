@@ -6,35 +6,39 @@
 
 
 <div class="sliderContainer">
-	<div id="slider_items" style="position:relative;overflow:hidden;width:737px;height:358px">
+	<div id="slider_items" style="position:relative;overflow:hidden;width:955px;height:358px">
 		<?php foreach ($_productCollection as $index=>$_product): $_i++; ?>
 			<div id="slide-<?php echo $_i ?>" class="slider">
-                            <div style="position:absolute;right:7px;top:5px;">
+                            <div class="promotionssliders"><img src="<?php echo $this->getSkinUrl() ?>images/cercei.jpg" width="300" height="300" alt="Home" /></div>
+                            <div style="position:absolute;left:7px;top:320px;">
                             <a href="http://messenger.yahoo.com/edit/send/?.target=YOUR_YAHOO_ID">
                 <img border="0" src="http://opi.yahoo.com/yahooonline/u=buenobia.shop/m=g/t=2/l=us/opi.jpg">
                 </a></div>
-				<img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(737,358); ?>" />
-				<p>Tip Produs: <span>Extensii cu Clip</span><br />
+                            <div style="position:absolute;left:150px;top:300px;"><img src="<?php echo $this->getSkinUrl() ?>images/transport.png" width="400" height="50" alt="Home" />
+
+                            </div>
+				<img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(955,358); ?>" />
+				<!--<p>Tip Produs: <span>Extensii cu Clip</span><br />
 				Cod Produs: <span><?php echo $_product->getSku() ?></span><br />
 				<span><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></span>.<br />
 		        <a href="<?php echo $_product->getProductUrl() ?>"><img src="<?php echo $this->getSkinUrl() ?>images/slider_bttn.png" alt="detalii" /></a>
-		        </p>
+		        </p>-->
 		    </div>
 	    <?php endforeach; ?>
 	</div>
 	<div class="sliderNavigator">
-    	<div class="sliderArrows"><a href="#"><img src="<?php echo $this->getSkinUrl() ?>images/slider_arrow_l.jpg" alt="left" /></a><a href="#"><img src="<?php echo $this->getSkinUrl() ?>images/slider_arrow_r.jpg" alt="next" /></a></div>
-        <div class="sliderCircles">
+    <!--	<div class="sliderArrows"><a href="#"><img src="<?php echo $this->getSkinUrl() ?>images/slider_arrow_l.jpg" alt="left" /></a><a href="#"><img src="<?php echo $this->getSkinUrl() ?>images/slider_arrow_r.jpg" alt="next" /></a></div>-->
+        <!--<div class="sliderCircles">
 
         	<?php for($i=1;$i<=$_productCollection->count();$i++) : ?>
         		<a href="#"><img id="slide-circle-<?php echo $i ?>" src="<?php echo $this->getSkinUrl() ?>images/slider_circle_active.jpg" alt="active" /></a>
         	<?php endfor; ?>
-        	<!--
+
 	        	<a href="#"><img src="<?php echo $this->getSkinUrl() ?>images/slider_circle_blank.jpg" alt="blank" /></a>
 	        	<a href="#"><img src="<?php echo $this->getSkinUrl() ?>images/slider_circle_blank.jpg" alt="blank" /></a>
 	        	<a href="#"><img src="<?php echo $this->getSkinUrl() ?>images/slider_circle_blank.jpg" alt="blank" /></a>
-        	-->
-        </div>
+
+        </div>-->
         <input type="hidden" id="slider_count" value="<?php echo $_productCollection->count() ?>" />
         <div id="slider_nav" class="sliderNumbers"></div>
     </div>

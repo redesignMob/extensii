@@ -88,6 +88,10 @@ Default layout, loads most of the pages
             <block type="core/text_list" name="left" as="left" translate="label">
                 <label>Left Column</label>
             </block>
+            
+            <block type="core/text_list" name="homebigverticalnav" as="homebigverticalnav" translate="label">
+                <label>homebigverticalnav Column</label>
+            </block>
 
             <block type="core/messages" name="global_messages" as="global_messages"/>
             <block type="core/messages" name="messages" as="messages"/>

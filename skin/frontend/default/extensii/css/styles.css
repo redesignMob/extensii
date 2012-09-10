@@ -5,7 +5,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
     padding:0;
 }
 body{
-    background:url(../images//mainbgr5.jpg) center 0 no-repeat #CE4CA5;
+    background:url(../images//mainbgr1234.jpg) center 0 no-repeat #CE4CA5;
     background-attachment:fixed;
     font-family:Verdana, Arial, Helvetica, sans-serif;
     font-size:12px;
@@ -97,7 +97,7 @@ a:hover{
 
 .content{
     padding:2px;
-   background-color:#F7EBF8;
+    background-color:#F7EBF8;
     /*background:url(x.png) repeat-x top;*/
     /*border:1px solid #FFFFFF;*/
     box-shadow: 0px 0px 19px #000 inset;
@@ -130,13 +130,13 @@ a:hover{
     text-shadow: 0px 1px 1px #fff;
 }
 .navigation ul li a:hover{
-     box-shadow: 0px 0px 10px #000 inset;
+    box-shadow: 0px 0px 10px #000 inset;
     background:url(../images//nav_hover.jpg);
     color:#9A0039;
     text-decoration:none;
 }
 .navigation ul li a.firstElement:hover{
-     box-shadow: 0px 0px 10px #000 inset;
+    box-shadow: 0px 0px 10px #000 inset;
     background:url(../images//nav_hover.jpg);
     color:#9A0039;
     text-decoration:none;
@@ -194,9 +194,11 @@ a:hover{
     color:#56022c;
 }
 .sliderNavigator{
+    border-radius:3px;
+    box-shadow:0px 0px 4px #000;
     position:relative;
-    background:url(../images//slider_selector.jpg);
-    width:739px;
+    background:url(../images//slider_selector2.jpg);
+    width:955px;
     height:22px;
     margin-top:4px;
 }
@@ -212,7 +214,7 @@ a:hover{
 }
 .sliderNumbers{
     position:absolute;
-    right:5px;
+    right:45px;
     top:3px;
 }
 .sliderNumbers a{
@@ -312,7 +314,7 @@ a:hover{
 }
 .promotiiBoxContainerImgCont img{
     border:1px solid #fff;
-     box-shadow: 0px 0px 25px black;
+    box-shadow: 0px 0px 25px black;
 }
 .promotiiBoxContainerPriceDetail{
     position:relative;
@@ -399,14 +401,14 @@ a:hover{
 }
 .mainMenu ul li ul li:hover
 { width:179px;
-    height:25px;
-    line-height:12px;
-    padding-left:31px;
-    padding-top:7px;
-    color:#fff !important;
-    text-decoration:none !important;
-    background:none;
-    background:url(../images//submenu_active.png) no-repeat;
+  height:25px;
+  line-height:12px;
+  padding-left:31px;
+  padding-top:7px;
+  color:#fff !important;
+  text-decoration:none !important;
+  background:none;
+  background:url(../images//submenu_active.png) no-repeat;
 }
 .mainMenu a.active{
     color:#9A0039;
@@ -456,6 +458,79 @@ a:hover{
     height:7px;
     background:url(../images//menu_footer.jpg) no-repeat;
 }
+.verticalmenu
+{
+
+}
+
+.verticalmenu ul.menulist li.parent
+{
+    background: url("../images//nav_hover.jpg") repeat scroll 0 0 transparent;
+    box-shadow: 0px 0px 10px black inset;
+    height: 46px;
+    border-radius: 10px 10px 0px 0px;
+    font-size: 15px;
+    width: 275px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight:Bold;
+
+}
+.verticalmenu ul.menulist li.parent a:hover
+{
+    text-decoration: none;
+    Color:#000 !important;
+
+}
+.verticalmenu ul.level0
+{
+    margin-top: 6px;
+}
+.verticalmenu  li.level1
+{
+    background: url(../images//nav_bgr.jpg) repeat-x top;
+    box-shadow: 0px 0px 10px black inset;
+    height: 45px;
+
+    font-size: 15px;
+    width: 275px;
+    line-height: 40px;
+    text-align: center;
+}
+.verticalmenu  li.level1:hover
+{
+    background: url("../images//nav_hover.jpg") repeat scroll 0 0 transparent;
+
+}
+.verticalmenu  ul.level0 li.last:hover
+{
+    background: url("../images//nav_hover.jpg") repeat scroll 0 0 transparent;
+
+}
+.verticalmenu  li.level1 a:hover
+{
+    text-decoration: none;
+    Color:#000 !important;
+
+}
+.verticalmenu  ul.level0 li.last
+{
+    background: url(../images//nav_bgr.jpg) repeat-x top;
+    box-shadow: 0px 0px 10px black inset;
+    height: 45px;
+    border-radius: 0px 0px 10px 10px;
+    font-size: 15px;
+    width: 275px;
+    line-height: 40px;
+    text-align: center;
+}
+.verticalmainMenu
+{
+
+}
+
 .cosulMeu{
     margin-top:10px;
 }
@@ -1455,7 +1530,7 @@ li{
 }
 #checkout-progress-wrapper
 {
-      background: #ed8bc7; /* Old browsers */
+    background: #ed8bc7; /* Old browsers */
     /* IE9 SVG, needs conditional override of 'filter' to 'none' */
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VkOGJjNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjU5JSIgc3RvcC1jb2xvcj0iI2VmYzRlYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmVkZmMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
     background: -moz-linear-gradient(left,  #ed8bc7 0%, #efc4ec 59%, #ffedfc 100%); /* FF3.6+ */
@@ -1573,4 +1648,69 @@ li.level-0  ul.level-0 { position:absolute;top:36px;}
     height: 190px;
     margin-right: 10px;
     margin-bottom: 10px;
+}
+.videobox
+{
+    height:350px;
+}
+.promotionssliders
+{
+    position:absolute;
+    left:153px;
+    top:10px;
+}
+.promotionssliders img
+{
+
+}
+.outsidecontent
+{
+    box-shadow: 0px 0px 25px #000;
+    border-radius:10px;
+}
+#checkout-step-login .col2-set
+{
+    padding:10px;
+}
+#checkout-step-login .col2-set .col-1
+{
+    margin-bottom: 10px;
+}
+#checkout-step-login .col2-set .col-1 h3
+{
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+#checkout-step-login .col2-set .col-1 h4
+{
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+#checkout-step-login .col2-set .col-1 ul.form-list
+{
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+#checkout-step-login .col2-set .col-1 ul.form-list li
+{
+    margin-bottom:5px;
+}
+#checkout-step-login .col2-set .col-2 h3
+{
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+#checkout-step-login .col2-set .col-2 #login-form fieldset
+{
+    padding:10px;
+}
+#checkout-step-login .col2-set .col-2 #login-form fieldset h4
+{
+     margin-top: 10px;
+    margin-bottom:10px;
+}
+#checkout-step-login .col2-set .col-2 #login-form fieldset ul.form-list li label
+{
+     float:left;
+     line-height:30px;
 }

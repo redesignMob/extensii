@@ -36,6 +36,7 @@
     </head>
 
     <body>
+
         <div class="container">
             <div class="header">
                 <div class="logo">
@@ -68,12 +69,26 @@
                 </div>
             </div>
             <?php echo $this->getChildHtml('header') ?>
+             <div class="outsidecontent">
             <div class="content">
 
-                <div class="slider_CelMaiVandut">
+                <div class="slider_CelMaiVandut" >
                     <?php echo $this->getLayout()->createBlock('catalog/product_list')->setCategoryId(6)->setTemplate('catalog/product/products_slider.phtml')->toHtml() ?>
-                    <?php echo $this->getLayout()->createBlock('catalog/product_list')->setTemplate('catalog/product/highsold_list.phtml')->toHtml() ?>
-                </div></div>
+                  <!--<?php echo $this->getLayout()->createBlock('catalog/product_list')->setTemplate('catalog/product/highsold_list.phtml')->toHtml() ?>-->
+                </div>
+                <div class="clear"></div>
+
+
+            <div class="promotiiBox videobox">
+
+                <div style="margin-left:10px;float:left;"><?php echo $this->getChildHtml('homebigverticalnav') ?>
+                </div>
+                <div style="margin-left:297px;box-shadow:0px 0px 15px #000;width:670px;height:350px;">
+                    <iframe width="670" height="350" src="http://www.youtube.com/embed/9rH1kT8EIOU" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
             <div class="promotiiBox">
                 <div class="promotiiHeadline">
                     <h1>Promotii</h1>
@@ -85,6 +100,7 @@
                     </div>
                     <div class="clear"></div>
                 </div>
+
 
 
             </div>
@@ -132,12 +148,15 @@
                                                                                                                         <!--
                                                                                                                         <div class="footer"><a href="#">EXTENSII DE PAR NATURAL</a> | <a href="#">EXTENSII DE PAR CHERATINA</a> | <a href="#">EXTENSII DE PAR CLIP-ON</a> | <a href="#">EXTENSII DE PAR MICRORING</a> | <a href="#">PERUCI DIN PAR NATURAL</a> | <a href="#">COZI DE PAR</a> </div>
                                                                                                                         -->
-  <?php echo $this->getChildHtml('mainFooter') ?>
-    </div>
-          </div>
-        </body>
+                                                                                                                        <?php echo $this->getChildHtml('mainFooter') ?>
+                                                                                                                        </div>
+             </div>
 
-    </html>
+                                                                                                                      
+    </div>
+                                                                                                                        </body>
+
+                                                                                                                        </html>
 
 
 

@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<config>
-    <modules>
-        <Magazento_Colorbox>
-            <active>true</active>
-            <codePool>community</codePool>
-        </Magazento_Colorbox>
-    </modules>
-</config>

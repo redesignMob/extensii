@@ -45,11 +45,11 @@ if($helper->getConfig('disable_zoombar')):
 ?>
 <p class="product-image">
     <?php
-        $_img = '<img src="'.$this->helper('catalog/image')->init($_product, 'image')->resize(365,339).'" alt="'.$this->htmlEscape($this->getImageLabel()).'" title="'.$this->htmlEscape($this->getImageLabel()).'" />';
+        $_img = '<img src="'.$this->helper('catalog/image')->init($_product, 'image')->resize($mainImageSize[0], $mainImageSize[1]).'" alt="'.$this->htmlEscape($this->getImageLabel()).'" title="'.$this->htmlEscape($this->getImageLabel()).'" />';
         if(empty($popUpImageSize[0]) || empty($popUpImageSize[0])):
             $popUpImage = $this->helper('catalog/image')->init($_product, 'image');
         else:
-            $popUpImage = $this->helper('catalog/image')->init($_product, 'image')->resize(365, 339);
+            $popUpImage = $this->helper('catalog/image')->init($_product, 'image')->resize($popUpImageSize[0], $popUpImageSize[1]);
         endif;
 
     ?>

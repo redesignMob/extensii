@@ -58,6 +58,10 @@ Default layout, loads most of the pages
             -->
             <block type="catalog/navigation" name="catalog.vertnav" template="catalog/navigation/vertical_nav.phtml"/>
         </reference>
+
+         <reference name="homebigverticalnav">
+            <block type="catalog/navigation" name="catalog.vertnav1" template="catalog/navigation/vertical_nav_1.phtml"/>
+        </reference>
         <reference name="right">
             <block type="catalog/product_compare_sidebar" before="cart_sidebar" name="catalog.compare.sidebar" template="catalog/product/compare/sidebar.phtml"/>
             <block type="core/template" name="right.permanent.callout" template="callouts/right_col.phtml">
