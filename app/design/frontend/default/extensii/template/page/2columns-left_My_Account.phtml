@@ -17,7 +17,7 @@
 	<div class="header">
     	<div class="logo"><img src="<?php echo $this->getSkinUrl() ?>images/logo.png" alt="Home" /></div>
         <div class="loginBox">
-       	  <div class="topContact"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('header-phone-nr ')->toHtml() ?></div>
+       	  <div class="topContact"><span>Telefon:</span> 0757-514-982 </div>
           <div class="topLogin"><a href="<?php echo $this->getUrl('customer/account')?>">Contul Meu</a><a href="<?php echo $this->getUrl('checkout/cart') ?>">Finalizare Comanda</a></div>
         </div>
         <div class="searchBox"><table width="100%" height="35" border="0" cellpadding="0" cellspacing="0">
@@ -33,7 +33,7 @@
         </table>
         </div>
     </div>
-        <?php echo $this->getChildHtml('header') ?>
+        <?php // echo $this->getChildHtml('header') ?>
     <div class="content">
 
         <div class="insidePageContent">
